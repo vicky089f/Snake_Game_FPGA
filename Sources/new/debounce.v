@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module debounce(
     input clk,
-	input reset,
+    input reset,
     input in,
     output out
     );
