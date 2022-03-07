@@ -24,7 +24,7 @@ W: Button to move snake upward
 A: button to move the snake to the left
 S: button to move the snake downward
 D: button to move the snake to the right
-X – becomes 1 when the snake collides with itself
+X: becomes 1 when the snake collides with itself
 
 Outputs of FSM
 The state itself is the output.
