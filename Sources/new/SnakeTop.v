@@ -40,7 +40,6 @@ module SnakeTop(
     wire key,keypress;
     wire [2:0] Dir;
     wire q_draw, collide, over, food_draw;
-    wire clk2, clk3, clk5, clk10;
     
     
     ClkDiv M1(clk, reset, Clk_Deb, Clk_Snake);
@@ -55,8 +54,6 @@ module SnakeTop(
     VGA_480p M5(Clk_25, !locked, sx, sy, hsync, vsync, de);
     
     SnakeBody M6(clk, reset, sx, sy, Dir, q_draw, collide, over, food_draw);
-    
-    //Snake_Clocks M7(clk, reset, clk2, clk3, clk5, clk10);
     
     
     
