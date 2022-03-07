@@ -207,27 +207,8 @@ module SnakeBody(
             end
         end
         
-        /*always@(*)
-        begin
-            if((sx >= head_x && sx < head_x +32) && (sy >= head_y && sy < head_y +32))
-                q_draw = 1;
-            else begin
-                for(i=0; i<= 30; i=i+1) begin
-                    if(i <= (len-2)) begin
-                        if((sx >= body_x[i] && sx < body_x[i] +32) && (sy >= body_y[i] && sy < body_y[i] +32))
-                            q_draw = 1;
-                        else
-                            q_draw = 0;
-                    end
-                end
-            end
-        end*/
-        
         always@(*)
         begin: display_snake
-            //if(Dir == 5) begin over <= 1; q_draw <= 0; end
-            //else begin
-                //over <= 0;
                 case(len)
                     3: begin
                         if((sx > head_x && sx < head_x +32) && (sy > head_y && sy < head_y +32)||
@@ -538,7 +519,7 @@ module SnakeBody(
         end
         
         always@(posedge Clk_Snake, posedge reset)
-        begin
+        begin: food_gen_and_len_incr
             if(reset) begin
                 len <= 3;
                 food_count <= 0;
@@ -561,35 +542,8 @@ module SnakeBody(
             end
         end
         
-        /*always@(Clk_Snake)
-        begin
-            if(reset) len <= 3;
-            else begin
-                if(eat) len <= len + 1;
-                else len <= len;
-            end
-        end
-        
-        always@(posedge Clk_Snake, posedge reset)
-        begin: food_position_assignment
-            if(reset) begin
-                food_x <= 416;
-                food_y <= 160;
-            end
-            else begin
-                if(eat == 1) begin
-                    food_x <= count_x;
-                    food_y <= count_y;
-                end
-                else begin
-                    food_x <= food_x;
-                    food_y <= food_y;
-                end
-            end
-        end*/
-        
         always@(*)
-        begin
+        begin: display_food
             if((sx > food_x && sx < food_x +32) && (sy > food_y && sy < food_y +32))
                 food_draw <= 1;
             else
