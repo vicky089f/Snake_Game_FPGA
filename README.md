@@ -18,19 +18,18 @@ If the snake goes out of the right end of the screen, it will come in from the l
 ## Snake FSM
 ### Stage Diagram
 ![](https://github.com/vicky089f/Snake_Game_FPGA/blob/main/Images/FSM.png)
-```
+
 Inputs tp FSM
-W: Button to move snake upward
-A: button to move the snake to the left
-S: button to move the snake downward
-D: button to move the snake to the right
-X: becomes 1 when the snake collides with itself
+ W: Button to move snake upward
+ A: button to move the snake to the left
+ S: button to move the snake downward
+ D: button to move the snake to the right
+ X: becomes 1 when the snake collides with itself
 
 Outputs of FSM
-The state itself is the output.
-It is used to determine the direction of motion of the snake.
-The Over state signifies that the snake has collided with itself, and the game is over.
-```
+ The state itself is the output. It is used to determine the direction of motion of the snake.
+ The Over state signifies that the snake has collided with itself, and the game is over.
+
 
 ## FPGA Post-Implementation Reports
 ### Resource Utilization
@@ -42,8 +41,8 @@ The Over state signifies that the snake has collided with itself, and the game i
 ![](https://github.com/vicky089f/Snake_Game_FPGA/blob/main/Images/Timing.png)
 
 ## Video of Snake Game
+The game demo can be found here: [Demo](https://www.youtube.com/watch?v=zLEhHw5FrRo)
 
 ## References
 1. https://projectf.io/posts/fpga-graphics/
-
-
+2. http://www.cse.cuhk.edu.hk/~mcyang/ceng3430/2020S/Lec07%20Driving%20VGA%20Display%20with%20ZedBoard.pdf
