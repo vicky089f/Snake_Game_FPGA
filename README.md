@@ -18,7 +18,7 @@ If the snake goes out of the right end of the screen, it will come in from the l
 ## Snake FSM
 ### Stage Diagram
 ![](https://github.com/vicky089f/Snake_Game_FPGA/blob/main/Images/FSM.png)
-
+```
 Inputs tp FSM
  W: Button to move snake upward
  A: button to move the snake to the left
@@ -29,7 +29,7 @@ Inputs tp FSM
 Outputs of FSM
  The state itself is the output. It is used to determine the direction of motion of the snake.
  The Over state signifies that the snake has collided with itself, and the game is over.
-
+```
 
 ## FPGA Post-Implementation Reports
 ### Resource Utilization
